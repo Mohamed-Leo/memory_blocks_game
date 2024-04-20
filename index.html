@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Memory Blocks Game">
+        <!-- main css file -->
+        <link rel="stylesheet" href="static/css/style.css">
+        <title>Memory Blocks Game</title>
+    </head>
+    <body>
+        
+
+        <!-- Start info-header -->
+        <div class="info-header">
+            <div class="player-name">
+                Hello : <span></span>
+            </div>
+            <div class="timer">3:00</div>
+            <div class="fail-tries">
+                wrong tries : <span>0</span>
+            </div>
+        </div>
+        <!-- End info-header -->
+
+
+        <!-- Start game-container -->
+        <div class="game-container">
+            <!-- Start gm-cards -->
+            <div class="gm-cards" data-tech="html">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/html.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="html">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/html.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="react">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/react.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="react">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/react.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="css">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/css.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="css">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/css.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="laravel">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/laravel.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="laravel">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/laravel.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="js">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/js.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="js">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/js.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="php">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/php.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="php">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/php.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="vue">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/vue.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="vue">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/vue.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="sass">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/sass.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="sass">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/sass.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="node">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/node.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="node">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/node.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="sql">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/sql.png" alt="game-icon-card">
+                </div>
+            </div>
+
+            <div class="gm-cards" data-tech="sql">
+                <div class="face front"></div>
+                <div class="face back">
+                    <img src="static/images/sql.png" alt="game-icon-card">
+                </div>
+            </div>
+            <!-- End gm-cards -->
+        </div>
+        <!-- End game-container -->
+
+        <!-- add audio -->
+        <audio id="success" src="static/audios/mixkit-achievement-bell-600.wav" preload="auto"></audio>
+        <audio id="fail" src="static/audios/error-when-entering-the-game-menu-132111.mp3" preload="auto"></audio>
+
+        <!-- background audio game -->
+        <audio id="background_sound" src="static/audios/Luke-Bergs-Take-It-Easy(chosic.com).mp3" preload="auto" loop></audio>
+
+        <!-- Start start-screen -->
+        <div class="start-screen">
+            <button onclick="startGame(this)">Start Game</button>
+        </div>
+        <!-- End start-screen -->
+
+
+        <!-- Start winner div -->
+        <div class="winner">
+            <h1>awesome you won the game!</h1>
+            <p>5</p>
+            <img src="https://i.giphy.com/26u4cqiYI30juCOGY.webp" alt="winner gif image">
+        </div>
+        <!-- End winner div -->
+
+
+        <!-- Start lose div -->
+        <div class="lose">
+            <h1>you lose</h1>
+            <p>5</p>
+            <img src="https://i.giphy.com/eJ4j2VnYOZU8qJU3Py.webp" alt="lose gif image">
+        </div>
+        <!-- End lose div -->
+        
+        <script src="static/js/index.js"></script>
+    </body>
+</html>
